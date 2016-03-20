@@ -49,5 +49,9 @@
 [pull]
     default = simple
 [user]
-    name = Mikołaj Siedlarek
-    email = mikolaj@siedlarek.pl
+    name = Katarzyna Siedlarek
+    email = katarzyna@siedlarek.pl
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

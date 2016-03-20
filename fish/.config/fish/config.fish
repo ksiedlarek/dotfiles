@@ -29,4 +29,6 @@
     end
 
     set -x NVM_DIR "$HOME/.nvm"
+
+    set PATH Base/Applications/Postgres/Contents/Versions/latest/bin $PATH
 # end

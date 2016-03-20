@@ -40,3 +40,14 @@ PS1="\u@\h:\w\$(parse_git_branch)\$ "
 if which brew > /dev/null && [ -d "$(brew --prefix)/etc/bash_completion.d" ]; then
     source "$(brew --prefix)/etc/bash_completion.d/"*
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# added by Anaconda 2.3.0 installer
+export PATH="/Users/ksiedlarek/anaconda/bin:$PATH"
+
+#alias to love
+alias love = "../../Applications/love.app/Contents/MacOS/love"
+
+export PATH="Base/Applications/Postgres/Contents/Versions/9.4/bin:$PATH"
