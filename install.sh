@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -eo pipefail
 
 readonly COMMON_PACKAGES=(
     bash
@@ -10,9 +10,8 @@ readonly COMMON_PACKAGES=(
     screen
     shell
     tmux
-    vim
+    neovim
     ipython
-    atom
 )
 
 readonly LINUX_PACKAGES=(
@@ -39,11 +38,13 @@ main() {
 
     for package in ${packages[*]}; do
         local install_script="${DOTFILES}/${package}/install.sh"
-        echo $install_script
         if [[ -x $install_script ]]; then
+            echo $install_script
             /bin/sh $install_script
         fi
     done
+
+    echo "Done."
 }
 
 main $@
